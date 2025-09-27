@@ -1,33 +1,14 @@
-import React, { Component } from "react";
 
-class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-  }
+import './App.css'
+import Counter from './Counter'
 
-  increment = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
+function App() {
 
-  decrement = () => {
-    this.setState({ count: this.state.count - 1 });
-  };
-
-  render() {
-    return (
-      <div className="container">
-        {/* Display count in correct format */}
-        <p>Count:{this.state.count}</p>
-
-        {/* Buttons must be named exactly "Increment" and "Decrement" */}
-        <button onClick={this.increment}>Increment</button>
-        <button onClick={this.decrement}>Decrement</button>
-      </div>
-    );
-  }
+  return (
+    <>
+      <Counter />
+    </>
+  )
 }
 
-export default Counter;
+export default App
